@@ -1,4 +1,5 @@
 ﻿using BarkforsCRUDTest.Models;
+using BarkforsCRUDTest.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -15,14 +16,19 @@ namespace BarkforsCRUDTest.Controllers
         {
             _vehicleRepository = vehicleRepository;
         }
-        public string Index()
+        public ViewResult Index()
         {
-            return _vehicleRepository.GetVehicle(1).ModelName;
+            var model = _vehicleRepository.GetAllVehicles();
+            return View(model);
         }
         public ViewResult Details()
         {
-            Vehicle model = _vehicleRepository.GetVehicle(1);
-            return View(model);
+            HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel()
+            {
+                Vehicle = _vehicleRepository.GetVehicle(1),
+                PageTitle = "Vehicle Details"
+            };
+            return View(homeDetailsViewModel);
         }
     }
 }

@@ -8,5 +8,6 @@ namespace BarkforsCRUDTest.Models
     public interface IVehicleRepository
     {
         Vehicle GetVehicle(int Id);
+        IEnumerable<Vehicle> GetAllVehicles();
     }
 }

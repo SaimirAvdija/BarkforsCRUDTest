@@ -17,6 +17,12 @@ namespace BarkforsCRUDTest.Models
                 new Vehicle() {Id = 3, LicencePlateNumber = 3, ModelName = "C3", Brand = "Tesla", TypeOfFuel = "Electric", Color = "White"}
             };
         }
+
+        public IEnumerable<Vehicle> GetAllVehicles()
+        {
+            return _vehicleList;
+        }
+
         public Vehicle GetVehicle(int Id)
         {
             return _vehicleList.FirstOrDefault(v => v.Id == Id);
