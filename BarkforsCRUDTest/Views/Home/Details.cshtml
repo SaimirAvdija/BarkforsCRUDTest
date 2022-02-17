@@ -1,24 +1,30 @@
 ﻿@model BarkforsCRUDTest.ViewModels.HomeDetailsViewModel
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <title></title>
-</head>
-<body>
-    <h3>@Model.PageTitle</h3>
-    <div>
-        Licence Plate Number: @Model.Vehicle.LicencePlateNumber
-    </div>
-    <div>
-        Model Name: @Model.Vehicle.ModelName
-    </div>
-    <div>
-        Brand: @Model.Vehicle.Brand
-    </div>
-    <div>
-        Type of fuel: @Model.Vehicle.TypeOfFuel
-    </div>
-    <div>
-        Color: @Model.Vehicle.Color
-    </div>
-</body>
-</html>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewBag.Title = "Car Details";
+}
+
+<h3>@Model.PageTitle</h3>
+<div>
+    Licence Plate Number: @Model.Vehicle.LicencePlateNumber
+</div>
+<div>
+    Model Name: @Model.Vehicle.ModelName
+</div>
+<div>
+    Brand: @Model.Vehicle.Brand
+</div>
+<div>
+    Type of fuel: @Model.Vehicle.TypeOfFuel
+</div>
+<div>
+    Color: @Model.Vehicle.Color
+</div>
+<div>
+    @Model.Vehicle.VehicleEquipment
+</div>
+
+@section Scripts{ 
+    <script src="~/js/CustomScript.js"></script>
+}
