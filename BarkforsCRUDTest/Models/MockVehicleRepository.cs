@@ -12,9 +12,9 @@ namespace BarkforsCRUDTest.Models
         {
             _vehicleList = new List<Vehicle>()
             {
-                new Vehicle() {Id = 1, LicencePlateNumber = 1, ModelName = "A1", Brand = "Mercedes", TypeOfFuel = "Diesel", Color = "Blue", VehicleEquipment = "Extra Tire" },
-                new Vehicle() {Id = 2, LicencePlateNumber = 2, ModelName = "B2", Brand = "KIA", TypeOfFuel = "Gasoline", Color = "Orange", VehicleEquipment = "Seat warmer" },
-                new Vehicle() {Id = 3, LicencePlateNumber = 3, ModelName = "C3", Brand = "Tesla", TypeOfFuel = "Electric", Color = "White", VehicleEquipment = "Extra Tire"}
+                new Vehicle() {Id = 1, LicencePlateNumber = 1, ModelName = "A1", Brand = "Mercedes", TypeOfFuel = "Diesel", Color = "Blue"},
+                new Vehicle() {Id = 2, LicencePlateNumber = 2, ModelName = "B2", Brand = "KIA", TypeOfFuel = "Gasoline", Color = "Orange"},
+                new Vehicle() {Id = 3, LicencePlateNumber = 3, ModelName = "C3", Brand = "Tesla", TypeOfFuel = "Electric", Color = "White"}
             };
         }
 

@@ -13,6 +13,5 @@ namespace BarkforsCRUDTest.Models
         public string Brand { get; set; }
         public string TypeOfFuel { get; set; }
         public string Color { get; set; }
-        public string VehicleEquipment { get; set; }
     }
 }

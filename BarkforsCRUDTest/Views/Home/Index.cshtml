@@ -4,31 +4,20 @@
     ViewBag.Title = "List of Cars";
 }
 
-<table>
-    <thead>
-        <tr>
-            <th>Id</th>
-            <th>Licence Plate Number</th>
-            <th>Model Name</th>
-            <th>Brand</th>
-            <th>Type of fuel</th>
-            <th>Color</th>
-            <th>Vehicle Equipment</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var vehicle in Model)
-    {
-        <tr>
-            <td>@vehicle.Id</td>
-            <td>@vehicle.LicencePlateNumber</td>
-            <td>@vehicle.ModelName</td>
-            <td>@vehicle.Brand</td>
-            <td>@vehicle.TypeOfFuel</td>
-            <td>@vehicle.Color</td>
-            <td>@vehicle.VehicleEquipment</td>
 
-        </tr>
+<div class="card-deck">
+    @foreach (var vehicle in Model)
+    {
+        <div class="card m-3">
+            <div class="card-header">
+                <h3>@vehicle.LicencePlateNumber</h3>
+            </div>
+            <img class="card-img-top" src="~/images/car.jpg"/>
+            <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">View</a>
+                <a href="#" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
     }
-    </tbody>
-</table>
+</div>

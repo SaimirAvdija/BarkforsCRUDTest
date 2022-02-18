@@ -4,24 +4,31 @@
     ViewBag.Title = "Car Details";
 }
 
-<h3>@Model.PageTitle</h3>
-<div>
-    Licence Plate Number: @Model.Vehicle.LicencePlateNumber
-</div>
-<div>
-    Model Name: @Model.Vehicle.ModelName
-</div>
-<div>
-    Brand: @Model.Vehicle.Brand
-</div>
-<div>
-    Type of fuel: @Model.Vehicle.TypeOfFuel
-</div>
-<div>
-    Color: @Model.Vehicle.Color
-</div>
-<div>
-    @Model.Vehicle.VehicleEquipment
+<div class="row justify-content-center m-3">
+    <div class="col-sm-8">
+        <div class="card">
+            <div class="card-header">
+                <h1>@Model.Vehicle.ModelName</h1>
+            </div>
+
+            <div class="card-body text-center">
+                <img class="card-img-top" src="~/images/car.jpg" />
+
+                <h4>Vehicle ID : @Model.Vehicle.Id</h4>
+                <h4>Licence Plate Number : @Model.Vehicle.LicencePlateNumber</h4>
+                <h4>Model Name : @Model.Vehicle.ModelName</h4>
+                <h4>Brand : @Model.Vehicle.Brand</h4>
+                <h4>Type of Fuel : @Model.Vehicle.TypeOfFuel</h4>
+                <h4>Color : @Model.Vehicle.Color</h4>
+
+            </div>
+            <div class="card-footer text-center">
+                <a href="#" class="btn btn-primary">Back</a>
+                <a href="#" class="btn btn-primary">Edit</a>
+                <a href="#" class="btn btn-danger">Delete</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 @section Scripts{ 

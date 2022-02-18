@@ -18,7 +18,7 @@ namespace BarkforsCRUDTest.Controllers
         }
         public ViewResult Index()
         {
-            var model = _vehicleRepository.GetAllVehicles();           
+            var model = _vehicleRepository.GetAllVehicles();
             return View(model);
         }
         public ViewResult Details(int? id)
