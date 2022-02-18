@@ -21,11 +21,11 @@ namespace BarkforsCRUDTest.Controllers
             var model = _vehicleRepository.GetAllVehicles();           
             return View(model);
         }
-        public ViewResult Details()
+        public ViewResult Details(int? id)
         {
             HomeDetailsViewModel homeDetailsViewModel = new HomeDetailsViewModel()
             {
-                Vehicle = _vehicleRepository.GetVehicle(1),
+                Vehicle = _vehicleRepository.GetVehicle(id??1),
                 PageTitle = "Vehicle Details"
             };
             return View(homeDetailsViewModel);
