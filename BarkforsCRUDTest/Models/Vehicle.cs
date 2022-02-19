@@ -10,8 +10,9 @@ namespace BarkforsCRUDTest.Models
         public int Id { get; set; }
         public int LicencePlateNumber { get; set; }
         public string ModelName { get; set; }
-        public string Brand { get; set; }
-        public string TypeOfFuel { get; set; }
-        public string Color { get; set; }
+        public Brand Brand { get; set; }
+        public TypeOfFuel TypeOfFuel { get; set; }
+        public VehicleColor VehicleColor { get; set; }
+        public VehicleEquipment VehicleEquipment { get; set; }
     }
 }

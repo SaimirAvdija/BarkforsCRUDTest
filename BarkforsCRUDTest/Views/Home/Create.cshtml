@@ -1,0 +1,32 @@
+﻿@model HomeDetailsViewModel
+
+@{ 
+    ViewBag.Title = "Add Vehicle";
+}
+
+<form asp-controller="Home" asp-action="Create" method="post">
+    <div>
+        <label asp-for="Vehicle.LicencePlateNumber"></label>
+        <input asp-for="Vehicle.LicencePlateNumber" />
+    </div>
+    <div>
+        <label asp-for="Vehicle.ModelName"></label>
+        <input asp-for="Vehicle.ModelName" />
+    </div>
+    <div>
+        <label asp-for="Vehicle.Brand"></label>
+        <select asp-for="Vehicle.Brand" asp-items="Html.GetEnumSelectList<Brand>()"></select>
+    </div>
+    <div>
+        <label asp-for="Vehicle.TypeOfFuel"></label>
+        <select asp-for="Vehicle.TypeOfFuel" asp-items="Html.GetEnumSelectList<TypeOfFuel>()"></select>
+    </div>
+    <div>
+        <label asp-for="VehicleColor"></label>
+        <select asp-for="VehicleColor" asp-items="Html.GetEnumSelectList<VehicleColor>()"></select>
+    </div>
+    <div>
+        <label asp-for="VehicleEquipment"></label>
+        <select asp-for="VehicleEquipment" asp-items="Html.GetEnumSelectList<VehicleEquipment>()"></select>
+    </div>
+</form>

@@ -10,5 +10,7 @@ namespace BarkforsCRUDTest.ViewModels
     {
         public Vehicle Vehicle { get; set; }
         public string PageTitle { get; set; }
+        public VehicleEquipment VehicleEquipment { get; set; }
+        public VehicleColor VehicleColor { get; set; }
     }
 }
