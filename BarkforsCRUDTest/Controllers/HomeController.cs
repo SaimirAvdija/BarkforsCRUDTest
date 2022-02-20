@@ -30,8 +30,23 @@ namespace BarkforsCRUDTest.Controllers
             };
             return View(homeDetailsViewModel);
         }
+        [HttpGet]
         public ViewResult Create()
         {
+            return View();
+        }
+        public ViewResult Edit()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Create(Vehicle vehicle)
+        {
+            if (ModelState.IsValid)
+            {
+                Vehicle newVehicle = _vehicleRepository.Add(vehicle);
+                return RedirectToAction("details", new { id = newVehicle.Id });
+            }
             return View();
         }
     }

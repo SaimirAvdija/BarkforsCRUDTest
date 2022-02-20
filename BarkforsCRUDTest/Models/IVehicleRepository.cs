@@ -9,5 +9,8 @@ namespace BarkforsCRUDTest.Models
     {
         Vehicle GetVehicle(int Id);
         IEnumerable<Vehicle> GetAllVehicles();
+        Vehicle Add(Vehicle vehicle);
+        Vehicle Update(Vehicle vehicleChanges);
+        Vehicle Delete(int id);
     }
 }

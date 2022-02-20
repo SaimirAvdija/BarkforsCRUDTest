@@ -9,7 +9,7 @@ namespace BarkforsCRUDTest.Models
     {
         None,
         Sport,
-        Seatwarmer,
-        Family
+        Adventure,
+        Family,
     }
 }
