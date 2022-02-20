@@ -8,8 +8,10 @@ namespace BarkforsCRUDTest.Models
     public enum VehicleEquipment
     {
         None,
-        Sport,
-        Adventure,
-        Family,
+        Sensor,
+        Sportseats,
+        Keyless,
+        Cruisecontroll,
+        Mediadisplay,
     }
 }

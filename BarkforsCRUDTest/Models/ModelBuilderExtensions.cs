@@ -19,7 +19,7 @@ namespace BarkforsCRUDTest.Models
                     Brand = Brand.Mercedes,
                     TypeOfFuel = TypeOfFuel.Diesel,
                     VehicleColor = VehicleColor.Blue,
-                    VehicleEquipment = VehicleEquipment.Sport
+                    VehicleEquipment = VehicleEquipment.Sportseats
                 }
                 );
         }
