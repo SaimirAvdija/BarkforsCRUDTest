@@ -49,5 +49,10 @@ namespace BarkforsCRUDTest.Controllers
             }
             return View();
         }
+        public IActionResult Delete(int id)
+        {
+            Vehicle deleteVehicle = _vehicleRepository.Delete(id);
+            return RedirectToAction("index");
+        }
     }
 }
