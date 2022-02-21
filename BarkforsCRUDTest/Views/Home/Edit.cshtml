@@ -1,10 +1,11 @@
-﻿@model VehicleCreateViewModel
+﻿@model VehicleEditViewModel
 
-@{ 
-ViewBag.Title = "Add Vehicle";
+@{
+    ViewBag.Title = "Edit Vehicle";
 }
 
-<form asp-controller="Home" asp-action="Create" method="post" class="mt-3">
+<form asp-controller="Home" asp-action="edit" method="post" class="mt-3">
+    <input hidden asp-for="Id"/>
     <div class="form-group row" style="margin-top:5px">
         <label asp-for="LicencePlateNumber" class="col-sm-2 col-form-label" style="margin-top:5px"></label>
         <div class="col-sm-10">
@@ -47,7 +48,8 @@ ViewBag.Title = "Add Vehicle";
     </div>
     <div class="form-group row" style="margin-top:5px">
         <div class="col-sm-10">
-            <button type="submit" class="btn btn-primary">Create</button>
+            <button type="submit" class="btn btn-primary">Update</button>
+            <a asp-controller="home" asp-action="index" class="btn btn-primary">Cancel</a>
         </div>
     </div>
 </form>

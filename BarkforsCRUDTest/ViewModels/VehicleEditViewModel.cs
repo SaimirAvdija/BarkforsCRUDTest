@@ -5,7 +5,8 @@ using System.Threading.Tasks;
 
 namespace BarkforsCRUDTest.ViewModels
 {
-    public class VehicleEditViewModel
+    public class VehicleEditViewModel : VehicleCreateViewModel
     {
+        public int Id { get; set; }
     }
 }
