@@ -101,7 +101,7 @@ namespace BarkforsCRUDTest.Controllers
             }
             else
             {
-                return View(vehicleList.Where(x => x.ModelName == search.ToUpper()));
+                return View(vehicleList.Where(x => x.ModelName.ToUpper() == search.ToUpper()));
             }
         }
     }
